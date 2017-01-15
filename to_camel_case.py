@@ -1,3 +1,6 @@
+# Link for this cata
+# https://www.codewars.com/kata/convert-string-to-camel-case/
+
 def to_camel_case(text):
     if not text:
         return text
