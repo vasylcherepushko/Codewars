@@ -1,4 +1,4 @@
-# Link for this cata
+# Link to this kata
 # https://www.codewars.com/kata/convert-string-to-camel-case/
 
 def to_camel_case(text):
