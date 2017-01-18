@@ -1,3 +1,6 @@
+# Link to this kata
+# https://www.codewars.com/kata/the-observed-pin
+
 def get_pins(observed):
     adjacent = {
                 '1': ['1', '2', '4'],
