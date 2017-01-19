@@ -1,3 +1,7 @@
+# Link to kata
+# https://www.codewars.com/kata/hamming-numbers/
+# Inspired by https://www.codewars.com/kata/reviews/5672692ee3659e3f8a00000c/groups/5672692ee3659e3f8a000010
+
 from collections import deque
 
 def hamming(n):
