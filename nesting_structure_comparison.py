@@ -1,19 +1,12 @@
 # Link to this kata
-# https://www.codewars.com/kata/520446778469526ec0000001
+# https://www.codewars.com/kata/nesting-structure-comparison
 
-def same_structure_as(original, other):  
-    if not (isinstance(original, list) and isinstance(other, list)):
-        return False
-    if len(original) != len(other):
-        return False
-    for x, y in zip(original, other):
-        first = isinstance(x, list)
-        second = isinstance(y, list)
-        if first != second:
-            return False
-        if first and second:
-            if same_structure_as(x, y):
-                continue
-            else:
+def same_structure_as(original,other):
+    if isinstance(original, list) and isinstance(other, list) and len(original) == len(other):
+        for a1, a2 in zip(original, other):
+            if not same_structure_as(a1, a2):
                 return False
-    return True
+        else:
+            return True
+    else:
+        return not isinstance(original, list) and not isinstance(other, list)

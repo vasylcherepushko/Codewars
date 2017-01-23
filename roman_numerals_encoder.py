@@ -1,14 +1,23 @@
 # Link to this kata
-# https://www.codewars.com/kata/51b62bf6a9c58071c600001b
+# https://www.codewars.com/kata/roman-numerals-encoder
 
-def solution(n):
-    NUMERALS = [['M', 'MM', 'MMM'],   
-                ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'],
-                ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
-                ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']]
-    
-    res = ''        
-    for i, d in enumerate(str(n).zfill(4)):
-        res += NUMERALS[i][int(d)-1] if int(d) != 0 else ''
-    
-    return res   
+def solution(n, res=''):
+    NUMERALS = {1000:'M',
+                      900: 'CM',
+                      500: 'D',
+                      400: 'CD',
+                      100: 'C',
+                      90: 'XC',
+                      50: 'L',
+                      40: 'XL',
+                      10: 'X',
+                      9: 'IX',
+                      5: 'V',
+                      4: 'IV',
+                      1: 'I'
+    }
+    for k in sorted(NUMERALS.keys(), reverse=True):
+        while n >= k:
+            res += NUMERALS[k]
+            n -= k
+    return res
