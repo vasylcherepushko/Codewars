@@ -4,6 +4,7 @@
 
 from collections import deque
 
+
 def hamming(n):
     seq = [1]
     q2, q3, q5 = deque([2]), deque([3]), deque([5])
