@@ -11,3 +11,11 @@ def maxSequence(arr):
     M = max(sum(arr[i:mid]) for i in range(mid-1, -1, -1)) \
         + max(sum(arr[mid:i]) for i in range(mid+1, n+1))
     return max(L, R, M)
+
+def kadane(arr):
+    lowest = res = total = 0
+    for n in arr:
+        total += n
+        lowest = min(lowest, total)
+        res = max(res, total - lowest)
+    return res
