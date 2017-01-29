@@ -26,7 +26,7 @@ def hamming_alternative(n):
     expos = [0, 0, 0]
     hamms = [1]
 
-	for _ in range(1, n):
+    for _ in range(1, n):
         next_hamms = [bases[i] * hamms[expos[i]] for i in range(3)]
         next_hamm = min(next_hamms)
         hamms.append(next_hamm)
