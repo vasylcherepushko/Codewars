@@ -19,3 +19,11 @@ def kadane(arr):
         lowest = min(lowest, total)
         res = max(res, total - lowest)
     return res
+
+def bruteforce(arr):
+    res = 0
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr) + 1):
+            if sum(arr[i:j]) > res:
+                res = sum(arr[i:j])
+    return res
