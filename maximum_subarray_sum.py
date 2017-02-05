@@ -12,9 +12,9 @@ def maxSequence_recursive(arr):
     return max(L, R, M)
 
 def maxSequence(arr):
-  lowest = ans = total = 0
-  for i in arr:
-    total += i
-    lowest = min(lowest, total)
-    ans = max(ans, total - lowest)
-  return ans
+    lowest = ans = total = 0
+    for i in arr:
+        total += i
+        lowest = min(lowest, total)
+        ans = max(ans, total - lowest)
+    return ans
