@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/strip-url-params
 
 def strip_url_params(url, params_to_strip=[]):

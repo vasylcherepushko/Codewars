@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/the-observed-pin
 
 from itertools import product

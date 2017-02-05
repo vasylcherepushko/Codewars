@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/two-to-one
 
 def longest(s1, s2):

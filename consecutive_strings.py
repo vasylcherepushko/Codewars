@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/consecutive-strings
 
 def longest_consec(a, k):

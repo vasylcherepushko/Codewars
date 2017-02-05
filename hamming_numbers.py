@@ -1,11 +1,9 @@
-# Link to this kata
 # https://www.codewars.com/kata/hamming-numbers
-# Inspired by https://www.codewars.com/kata/reviews/5672692ee3659e3f8a00000c/groups/5672692ee3659e3f8a000010
 
 from collections import deque
 
 
-def hamming(n):
+def hamming_deque(n):
     seq = [1]
     q2, q3, q5 = deque([2]), deque([3]), deque([5])
 
@@ -21,16 +19,14 @@ def hamming(n):
 
     return seq[-1]
 
-def hamming_alternative(n):
+def hamming(n):
     bases = [2, 3, 5]
     expos = [0, 0, 0]
     hamms = [1]
-
     for _ in range(1, n):
         next_hamms = [bases[i] * hamms[expos[i]] for i in range(3)]
         next_hamm = min(next_hamms)
         hamms.append(next_hamm)
         for i in range(3):
             expos[i] += int(next_hamms[i] == next_hamm)
-
     return hamms[-1]

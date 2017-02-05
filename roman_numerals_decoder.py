@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/roman-numerals-decoder
 
 def solution(roman):

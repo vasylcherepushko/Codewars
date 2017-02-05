@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/jaden-casing-strings
 
 def toJadenCase(string):

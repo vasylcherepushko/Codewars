@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/a-chain-adding-function
 
 class add(int):

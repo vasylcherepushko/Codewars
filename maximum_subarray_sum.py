@@ -1,7 +1,6 @@
-# Link to this kata
 # https://www.codewars.com/kata/maximum-subarray-sum
 
-def maxSequence(arr):
+def maxSequence_recursive(arr):
     n = len(arr)
     if n <= 1:
         return sum(arr)
@@ -12,18 +11,10 @@ def maxSequence(arr):
         + max(sum(arr[mid:i]) for i in range(mid+1, n+1))
     return max(L, R, M)
 
-def kadane(arr):
-    lowest = res = total = 0
-    for n in arr:
-        total += n
-        lowest = min(lowest, total)
-        res = max(res, total - lowest)
-    return res
-
-def bruteforce(arr):
-    res = 0
-    for i in range(len(arr)):
-        for j in range(i + 1, len(arr) + 1):
-            if sum(arr[i:j]) > res:
-                res = sum(arr[i:j])
-    return res
+def maxSequence(arr):
+  lowest = ans = total = 0
+  for i in arr:
+    total += i
+    lowest = min(lowest, total)
+    ans = max(ans, total - lowest)
+  return ans

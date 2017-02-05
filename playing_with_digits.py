@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/playing-with-digits
 
 def dig_pow(n, p):

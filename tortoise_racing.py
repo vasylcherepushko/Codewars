@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/tortoise-racing
 
 def race(v1, v2, g):

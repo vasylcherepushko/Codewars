@@ -1,4 +1,3 @@
-# Link to this kata
 # https://www.codewars.com/kata/growth-of-a-population
 
 def nb_year(population, percent, increment, target):
