@@ -5,6 +5,6 @@ def xo(s):
     for char in s.lower():
         if char == 'x':
             diff += 1
-        elif char =='o':
+        elif char == 'o':
             diff -= 1
     return not diff

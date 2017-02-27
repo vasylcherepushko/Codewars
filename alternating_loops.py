@@ -5,5 +5,5 @@ def combine(*args):
     for i in range(len(max(args, key=len))):
         for arr in args:
             if i < len(arr):
-		res.append(arr[i])
+		        res.append(arr[i])
     return res

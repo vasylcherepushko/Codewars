@@ -7,8 +7,8 @@ def gcd(a, b):
 
 def smallest(n):
     res = 1
-    
+
     for i in range(2, n + 1):
         res *= i / gcd(i, res)
-      
+
     return res

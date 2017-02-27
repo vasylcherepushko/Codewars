@@ -1,7 +1,7 @@
 # https://www.codewars.com/kata/8-towers
 
-import math
+from math import factorial
 
 
 def tower_combination(n):
-    return math.factorial(n)  
+    return factorial(n)

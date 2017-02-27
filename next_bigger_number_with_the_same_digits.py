@@ -4,13 +4,13 @@ from collections import Counter
 
 
 def next_bigger(n):
-    digits = str(n)    
+    digits = str(n)
     for i in range(len(digits) - 1, 0, -1):
         if digits[i] > digits[i-1]:
             break
     else:
         return -1
-                
+
     seen = Counter(digits[i-1:])
     res = digits[:i-1]
     d = digits[i-1]
