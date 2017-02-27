@@ -20,8 +20,9 @@ def permutations_itertools_style(s):
         yield list(pool[i] for i in indices)
 
 def permutations(l):
-  if len(l) <= 1: yield l
-  else:
-    for perm in permutations(l[1:]):
-      for i in range(len(perm)+1):
-        yield perm[:i] + l[0:1] + perm[i:]
+    if len(l) <= 1: 
+        yield l
+    else:
+        for perm in permutations(l[1:]):
+            for i in range(len(perm)+1):
+                yield perm[:i] + l[0:1] + perm[i:]
