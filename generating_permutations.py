@@ -1,6 +1,6 @@
 # https://www.codewars.com/kata/generating-permutations
 
-def permutations_itertools_style(s):
+def permutations(s):
     n = len(s)
     pool = tuple(s)
     indices = list(range(n))
@@ -18,11 +18,3 @@ def permutations_itertools_style(s):
                 break
 
         yield list(pool[i] for i in indices)
-
-def permutations(l):
-    if len(l) <= 1: 
-        yield l
-    else:
-        for perm in permutations(l[1:]):
-            for i in range(len(perm)+1):
-                yield perm[:i] + l[0:1] + perm[i:]

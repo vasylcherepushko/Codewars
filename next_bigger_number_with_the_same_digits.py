@@ -19,4 +19,5 @@ def next_bigger(n):
             res += k
             seen[k] -= 1
             break
+
     return int(res + ''.join(k * seen[k] for k in sorted(seen)))

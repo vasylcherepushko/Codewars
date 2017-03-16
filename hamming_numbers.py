@@ -3,7 +3,7 @@
 from collections import deque
 
 
-def hamming_deque(n):
+def hamming(n):
     seq = [1]
     q2, q3, q5 = deque([2]), deque([3]), deque([5])
 
@@ -18,15 +18,3 @@ def hamming_deque(n):
         q5.append(5 * x)
 
     return seq[-1]
-
-def hamming(n):
-    bases = [2, 3, 5]
-    expos = [0, 0, 0]
-    hamms = [1]
-    for _ in range(1, n):
-        next_hamms = [bases[i] * hamms[expos[i]] for i in range(3)]
-        next_hamm = min(next_hamms)
-        hamms.append(next_hamm)
-        for i in range(3):
-            expos[i] += int(next_hamms[i] == next_hamm)
-    return hamms[-1]
